@@ -9,7 +9,7 @@ metadata:
     heritage: {{ .Release.Service }}
     test: test
 spec:
-  replicas: 2
+  replicas:  {{ .Values.replicaCount }}
   revisionHistoryLimit: 3
   selector:
     matchLabels:
